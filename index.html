@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DNI por Nombre: How to Find and Verify DNI Information</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F6F4;
+    --paper-alt:#EAEAE6;
+    --ink:#1B1D22;
+    --ink-soft:#52565E;
+    --slate:#2B3A4A;
+    --slate-deep:#182430;
+    --red:#B5302F;
+    --red-deep:#7E1F1F;
+    --line:#D9D9D3;
+    --max:740px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:17px;
+    line-height:1.7;
+  }
+  a{color:var(--red-deep);}
+  h1,h2,h3{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.22;
+    margin:0 0 0.5em;
+  }
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 24px;}
+
+  header.site{
+    width:100%;
+    background:var(--slate-deep);
+    border-bottom:3px solid var(--red);
+  }
+  header.site .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 24px;
+  }
+  .brand{
+    font-family:'Source Serif 4', serif;
+    font-weight:700;
+    font-size:1.3rem;
+    color:#F2F1EC;
+    letter-spacing:0.01em;
+    text-decoration:none;
+  }
+  .brand span{color:var(--red);}
+  .tagline{color:#9AA7B3; font-size:0.85rem;}
+
+  .hero{
+    width:100%;
+    padding:68px 0 44px;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(650px 240px at 90% 0%, rgba(181,48,47,0.06), transparent 60%),
+      var(--paper);
+  }
+  .hero .wrap{max-width:840px;}
+  .hero .kicker{
+    display:inline-block;
+    color:#fff;
+    background:var(--slate);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-weight:600;
+    font-size:0.82rem;
+    padding:5px 14px;
+    border-radius:3px;
+    margin-bottom:16px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+  .hero h1{
+    font-size:2.35rem;
+    max-width:19ch;
+  }
+  .hero p.lede{
+    font-size:1.12rem;
+    color:var(--ink-soft);
+    max-width:58ch;
+    margin-top:18px;
+  }
+
+  main{padding:48px 0 8px;}
+  section{margin-bottom:44px;}
+  section h2{
+    font-size:1.42rem;
+    color:var(--slate-deep);
+    border-bottom:1px solid var(--line);
+    padding-bottom:10px;
+    margin-bottom:18px;
+  }
+  p{margin:0 0 1em;}
+  ul{margin:0 0 1em; padding-left:1.3em;}
+  li{margin-bottom:0.4em;}
+
+  .lead-para{font-size:1.06rem;}
+  .lead-para a.inline-link{
+    font-weight:700;
+    text-decoration-thickness:2px;
+    text-underline-offset:3px;
+  }
+
+  .table-wrap{overflow-x:auto; margin:1.2em 0; border-radius:6px; border:1px solid var(--line);}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.94rem;
+    background:#fff;
+  }
+  th, td{
+    text-align:left;
+    padding:12px 14px;
+    border-bottom:1px solid var(--line);
+  }
+  th{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    color:#fff;
+    background:var(--slate);
+  }
+  tr:nth-child(even) td{background:var(--paper-alt);}
+
+  .note{
+    background:#FBEFEE;
+    border-left:3px solid var(--red);
+    padding:16px 20px;
+    border-radius:2px;
+    margin:1.4em 0;
+    font-size:0.97rem;
+    color:var(--ink-soft);
+  }
+
+  .mid-link-para{
+    background:#fff;
+    border:1px solid var(--line);
+    padding:18px 22px;
+    border-radius:6px;
+    font-size:0.97rem;
+    color:var(--ink-soft);
+    box-shadow:0 1px 4px rgba(24,36,48,0.06);
+  }
+  .mid-link-para a.inline-link{
+    font-weight:700;
+    color:var(--slate-deep);
+  }
+
+  .checklist{
+    list-style:none;
+    padding:0;
+    margin:1.2em 0;
+    display:grid;
+    gap:8px;
+  }
+  .checklist li{
+    padding:10px 14px;
+    background:var(--paper-alt);
+    border-radius:4px;
+    font-size:0.95rem;
+  }
+  .checklist li::before{
+    content:"▸ ";
+    color:var(--red-deep);
+    font-weight:700;
+  }
+
+  .faq-item{
+    border-bottom:1px solid var(--line);
+    padding:18px 0;
+  }
+  .faq-item:last-child{border-bottom:none;}
+  .faq-item h3{
+    margin:0 0 8px;
+    font-size:1.03rem;
+    color:var(--slate-deep);
+  }
+  .faq-item p{margin:0; color:var(--ink-soft);}
+
+  .divider{
+    height:1px;
+    background:var(--line);
+    margin:48px 0;
+  }
+
+  footer{
+    width:100%;
+    background:var(--slate-deep);
+    color:#C9D2D9;
+    padding:44px 0 30px;
+    margin-top:32px;
+  }
+  footer .wrap{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+  footer .foot-top{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:24px;
+  }
+  footer .brand{font-size:1.15rem;}
+  footer p{color:#8394A0; font-size:0.9rem; max-width:44ch; margin:0;}
+  .social-links{
+    display:flex;
+    gap:16px;
+    list-style:none;
+    padding:0;
+    margin:0;
+  }
+  .social-links a{
+    color:#C9D2D9;
+    text-decoration:none;
+    font-size:0.92rem;
+    border:1px solid rgba(201,210,217,0.3);
+    padding:7px 14px;
+    border-radius:20px;
+    transition:border-color 0.2s ease, color 0.2s ease;
+  }
+  .social-links a:hover{
+    border-color:var(--red);
+    color:var(--red);
+  }
+  .foot-bottom{
+    border-top:1px solid rgba(201,210,217,0.18);
+    padding-top:18px;
+    font-size:0.82rem;
+    color:#647380;
+  }
+
+  @media (max-width:600px){
+    .hero{padding:50px 0 34px;}
+    .hero h1{font-size:1.8rem;}
+    header.site .wrap{flex-direction:column; align-items:flex-start; gap:6px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">DNI <span>por Nombre</span> Guía</a>
+    <span class="tagline">Understand DNI lookups before you search</span>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="kicker">Identity verification guide</div>
+    <h1>DNI por Nombre: How to Find and Verify DNI Information</h1>
+    <p class="lede">What a name-based DNI search can and can't tell you — and how to verify identity information safely.</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section>
+    <p class="lead-para">Searching for official identification information can be confusing, especially when
+      someone only knows a person's name and needs to understand whether a
+      <a class="inline-link" href="https://buscardnipornombre.pe/" target="_blank" rel="noopener">DNI por Nombre</a>
+      search is possible. In Spanish-speaking countries, DNI usually refers to a national identity document or
+      identification number. However, the meaning, availability, and legal use of DNI information can vary
+      depending on the country.</p>
+    <p>The phrase DNI por Nombre generally means searching for identification-related information using a
+      person's name. People may encounter this term when looking for public records, verifying an identity,
+      completing an administrative process, or learning how official identification systems work. However, a name
+      alone does not always provide enough information to identify one specific person.</p>
+    <p>Understanding how DNI systems work is important before using any online search service. It can help users
+      distinguish between legitimate government resources, public databases, commercial lookup websites, and
+      unreliable pages that may present incomplete or misleading information.</p>
+  </section>
+
+  <section>
+    <h2>What Does DNI por Nombre Mean?</h2>
+    <p>"DNI por Nombre" can be translated approximately as "DNI by name." The phrase describes the idea of
+      locating identification information through a person's name rather than starting with an identification
+      number.</p>
+    <p>A DNI is generally associated with a person's official identity. Depending on the country, it may be used
+      for government procedures, banking, education, employment, healthcare, voting, travel-related
+      administration, or other formal activities.</p>
+    <p>A name-based search can be useful in situations where someone has forgotten an identification number or is
+      trying to determine which official process should be used. However, names are not unique identifiers. Two
+      or more people can have exactly the same first and last names, which means a name search can produce
+      ambiguous results.</p>
+    <p>For this reason, official systems may require additional information before confirming an identity.</p>
+  </section>
+
+  <section>
+    <h2>Why People Search for DNI by Name</h2>
+    <p>There are several legitimate reasons someone may search for information related to a DNI. A person might be
+      trying to recover information needed for an administrative application, verify details in a public record,
+      or understand how an identification system works.</p>
+    <p>In some cases, users search online because they have seen a reference to DNI information on a document and
+      want to know what it means. Others may be looking for an official verification method rather than trying to
+      obtain another person's private information.</p>
+    <p>The purpose of the search matters. Government identification numbers are sensitive personal information, so
+      users should always consider privacy rules and use authorized services whenever personal data is
+      involved.</p>
+  </section>
+
+  <section>
+    <h2>How DNI Identification Systems Work</h2>
+    <p>Although the term DNI is widely recognized, identification systems are not identical across
+      Spanish-speaking countries. Each government determines how identification numbers are issued, stored,
+      verified, and used.</p>
+    <p>A typical national identification system connects an individual with an official record. The record may
+      contain identifying details such as a person's legal name, date of birth, nationality, or other information
+      required by the relevant authority.</p>
+    <p class="mid-link-para">Not all of this information is publicly searchable. Governments commonly restrict
+      access to sensitive records to protect citizens from identity theft, fraud, stalking, and unauthorized use
+      of personal information — one more reason it helps to start by
+      <a class="inline-link" href="#" target="_blank" rel="noopener">reviewing your country's official ID verification steps</a>
+      before trusting any third-party result.</p>
+    <p>This is why a website claiming that anyone can instantly retrieve complete private DNI information from a
+      name should be approached carefully.</p>
+  </section>
+
+  <section>
+    <h2>Can You Find a DNI Number Using Only a Name?</h2>
+    <p>Whether a DNI number can be found using only a name depends on the country, the database involved, and the
+      legal purpose of the search.</p>
+    <p>A common misconception is that every national identification number can be freely discovered by entering a
+      person's name into a search box. In reality, official identification systems often use additional
+      verification requirements.</p>
+    <p>A name may help locate a record, but it may not be sufficient to establish that the record belongs to the
+      correct individual. Additional details may be required to avoid confusing two people with similar names.</p>
+    <p>Users should therefore avoid assuming that a search result is accurate simply because the displayed name
+      appears familiar.</p>
+  </section>
+
+  <section>
+    <h2>Information You May Need for Verification</h2>
+    <p>When an authorized system supports identity verification, it may request additional information to
+      distinguish one person from another. Depending on the country and service, the required details can
+      vary.</p>
+    <p>Common verification information may include:</p>
+    <ul class="checklist">
+      <li>Full legal name</li>
+      <li>Date of birth</li>
+      <li>Nationality or citizenship information</li>
+      <li>Existing identification details</li>
+      <li>Official account credentials</li>
+      <li>Additional information requested by the government service</li>
+    </ul>
+    <p>These requirements exist partly to reduce unauthorized access. If a website requests excessive personal
+      information without clearly explaining why it is needed, users should consider whether the service is
+      trustworthy.</p>
+  </section>
+
+  <section>
+    <h2>DNI por Nombre vs. Official DNI Verification</h2>
+    <p>There is an important difference between searching for a person by name and verifying an identity through
+      an official government system.</p>
+    <p>A general search engine may return social profiles, directories, news articles, business records, or other
+      pages containing a person's name. None of these automatically proves that the person has a particular DNI
+      number.</p>
+    <p>An official verification service, on the other hand, is designed to validate information against an
+      authorized database. It may use authentication, identification numbers, or other verification requirements
+      before returning a result.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Search Method</th><th>Typical Purpose</th><th>Reliability</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Name search</td><td>Finding general information</td><td>Can be ambiguous</td></tr>
+          <tr><td>Public directory</td><td>Locating publicly available records</td><td>Depends on the source</td></tr>
+          <tr><td>Official government portal</td><td>Identity or document verification</td><td>Generally the appropriate source</td></tr>
+          <tr><td>Commercial lookup site</td><td>Aggregating available information</td><td>Should be evaluated carefully</td></tr>
+          <tr><td>Social media search</td><td>Finding profiles or public information</td><td>Not official identity verification</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The safest approach for formal identification matters is to use the relevant government authority rather
+      than relying on an unofficial lookup page.</p>
+  </section>
+
+  <section>
+    <h2>Privacy and Security Considerations</h2>
+    <p>Personal identification information deserves careful handling. A DNI number can be sensitive because it may
+      be used alongside other information to establish someone's identity.</p>
+    <p>Publishing, sharing, or collecting another person's identification information without authorization can
+      create privacy and security risks. It can also contribute to identity theft if the information falls into
+      the wrong hands.</p>
+    <div class="note">When researching DNI-related information, users should avoid entering sensitive details into
+      websites that have unclear ownership, suspicious advertisements, poor security practices, or no explanation
+      of how personal information is handled. A legitimate service should make its purpose and data practices
+      reasonably clear.</div>
+  </section>
+
+  <section>
+    <h2>How to Approach a DNI por Nombre Search Safely</h2>
+    <p>The safest approach starts by identifying the country involved. Since DNI systems differ between countries,
+      searching for a generic "DNI por Nombre" service without knowing the jurisdiction can lead to incorrect
+      information.</p>
+    <p>Once the country is known, users can identify the responsible government agency and look for its official
+      identification or document-verification service. This reduces the risk of relying on outdated third-party
+      information.</p>
+    <p>It is also useful to check whether the website uses secure connections and clearly explains what
+      information it collects. Users should never provide unnecessary personal details simply because a website
+      asks for them.</p>
+  </section>
+
+  <section>
+    <h2>Common Problems With Name-Based Searches</h2>
+    <p>Name-based identification searches have several limitations. The biggest problem is that names are not
+      unique. A common name may belong to hundreds or thousands of individuals.</p>
+    <p>Spelling differences can create another problem. Accents, middle names, abbreviations, married names, and
+      changes in legal names can affect search results. A database may also contain outdated information.</p>
+    <p>Another issue is data quality. Third-party websites may combine information from different sources, and an
+      old record may not accurately represent a person's current circumstances.</p>
+    <p>For these reasons, a name search should be treated as an initial lookup rather than automatic proof of
+      identity.</p>
+  </section>
+
+  <section>
+    <h2>Why Official Sources Matter</h2>
+    <p>Government identification authorities have direct responsibility for issuing and maintaining national
+      identity records. Their systems are therefore generally the appropriate place to verify official
+      documents.</p>
+    <p>Third-party websites can sometimes provide useful general information, but they should not automatically be
+      treated as equivalent to a government database.</p>
+    <p>If the purpose of the search involves a legal, financial, employment, immigration, or government procedure,
+      relying on an official source is particularly important.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Conclusion</h2>
+    <p>DNI por Nombre is a useful search phrase for understanding how people may locate or verify
+      identification-related information through a person's name. However, a name is not the same thing as an
+      official identity verification method. Similar names, outdated records, spelling differences, and privacy
+      restrictions can all affect search results.</p>
+    <p>The most reliable approach is to identify the relevant country and use its official identification
+      authority whenever formal verification is required. Third-party websites may provide general information,
+      but users should be careful before submitting personal details or trusting a result as proof of identity.</p>
+    <p>Ultimately, responsible DNI searching is about more than finding information quickly. It also involves
+      protecting personal data, understanding the limits of name-based searches, and choosing legitimate sources.
+      Whether the goal is to verify personal information, understand a government process, or learn how DNI
+      systems operate, using accurate and authorized resources provides a safer foundation for the search.</p>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>What does DNI por Nombre mean?</h3>
+      <p>DNI por Nombre generally refers to searching for DNI-related information using a person's name. The exact
+        process depends on the country and the identification authority involved.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I find anyone's DNI number with their name?</h3>
+      <p>Not necessarily. Access to national identification information is often restricted for privacy and
+        security reasons. A name alone may also be insufficient to distinguish between people with similar
+        names.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is a name enough to verify someone's identity?</h3>
+      <p>Usually, a name by itself is not reliable enough for formal identity verification. Additional information
+        or an authorized verification process may be required.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Are DNI numbers considered sensitive information?</h3>
+      <p>Identification numbers can be sensitive personal information because they may be used to identify an
+        individual and, in some circumstances, combined with other information for fraud or identity theft.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Should I use third-party DNI lookup websites?</h3>
+      <p>Users should evaluate such websites carefully. For official verification, government portals and
+        authorized services are generally more appropriate than unknown third-party websites.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why does a DNI search produce multiple people?</h3>
+      <p>Multiple results can occur because different people may share the same name. Differences in spelling,
+        incomplete records, and outdated databases can also affect results.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What should I do if I need my own DNI information?</h3>
+      <p>The appropriate method depends on the country. Start with the official identification authority or
+        government portal responsible for national identity documents in that jurisdiction.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can DNI information be used for financial verification?</h3>
+      <p>Some institutions may use official identification information as part of identity verification, but the
+        exact requirements depend on the institution and applicable laws. Users should provide information only
+        through legitimate and authorized channels.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="brand" href="#top">DNI <span>por Nombre</span> Guía</a>
+        <p style="margin-top:8px;">An independent guide to identity verification — not a government service, and
+          not affiliated with any official authority.</p>
+      </div>
+      <ul class="social-links">
+        <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Twitter / X</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+    <div class="foot-bottom">© 2026 DNI por Nombre Guía. For informational purposes only — always verify through official government sources.</div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
